@@ -1,2 +1,16 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# MATLAB / Simulink
+*.asv
+*.slxc
+*.slx.backup
+slprj/
+simulink_cache/
+codegen/
+
+# Python / CircuitPython
+__pycache__/
+*.pyc
+CIRCUITPY/
+
+# OS generated files
+.DS_Store
+Thumbs.db
