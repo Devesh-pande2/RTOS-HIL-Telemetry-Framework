@@ -13,7 +13,7 @@ This project provides a **dual-mode data generation pipeline** for aerospace the
 
 - **HIL (Hardware-in-Loop)** – Simulink streams sensor values to an RP2040 microcontroller running a **dual-task RTOS scheduler** (1ms RX / 10ms processing). The RP2040 computes battery & inverter means on‑silicon, adds IST timestamps, and returns processed data to MATLAB workspace. This adds real‑world timing and hardware‑induced latencies.
 
-**Note:** This project does **not** train any machine learning models. It generates clean, labeled datasets (`.mat` files) ready for you to train your own PHM (Predictive Health Monitoring) models.
+**Note:** This project does **not** train any machine learning models. It generates clean, labeled datasets (Excel/CSV files) ready for you to train your own PHM (Predictive Health Monitoring) models.
 
 ---
 
@@ -49,12 +49,13 @@ text
 ## Quick Start
 
 1. **Clone or download** this repository.
-2. **For SIL mode:** Open `data_generator_SIL.slx` in MATLAB/Simulink and run.
+2. **For SIL mode:** Open `data_generator_SIL.slx` in MATLAB/Simulink and run. Data is saved as Excel/CSV.
 3. **For HIL mode:**  
    - Copy `boot.py` and `code.py` to the `CIRCUITPY` drive of your RP2040.  
    - Run `Hil.m` in MATLAB.  
-   - Open `data_generator_HIL.slx` and run.
-4. Data appears in MATLAB workspace. Save as `.mat` for ML training.
+   - Open `data_generator_HIL.slx` and run.  
+   - Data is saved as Excel/CSV.
+4. Use the Excel/CSV file for ML training.
 
 📹 See `media/demo_video.mp4` for a live walkthrough.
 
@@ -68,5 +69,4 @@ MIT – see [LICENSE](LICENSE) file.
 
 ## Author
 
-Devesh Harish Pande – Third year B.Tech ETC  
-[LinkedIn](https://linkedin.com/in/your-profile)
+Devesh Harish Pande 
